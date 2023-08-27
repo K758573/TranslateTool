@@ -1,0 +1,12 @@
+{
+  "name" : "translatetool",
+  "version-string" : "1.0.0",
+  "builtin-baseline" : "1ba9a2591f15af5900f2ce2b3e2bf31771e3ac48",
+  "dependencies" : [ {
+    "name" : "asio",
+    "version>=" : "1.24.0#1"
+  }, {
+    "name" : "curlpp",
+    "version>=" : "2018-06-15#7"
+  } ]
+}
