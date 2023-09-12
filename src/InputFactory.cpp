@@ -4,6 +4,11 @@
 
 #include "InputFactory.h"
 
+std::vector<INPUT> InputFactory::KEYS_CONTROL_C  {
+  InputFactory::create(VK_CONTROL, InputFactory::KEY_DOWN), InputFactory::create('C', InputFactory::KEY_DOWN),
+  InputFactory::create('C', InputFactory::KEY_UP), InputFactory::create(VK_CONTROL, InputFactory::KEY_UP)
+};
+
 INPUT InputFactory::create(UINT16 vk, KEY_TYPE type)
 {
   INPUT input = {};

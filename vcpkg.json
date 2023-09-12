@@ -8,5 +8,14 @@
   }, {
     "name" : "curlpp",
     "version>=" : "2018-06-15#7"
+  }, {
+    "name" : "imgui",
+    "version>=" : "1.89.6#1"
+  }, {
+    "name" : "imgui-sfml",
+    "version>=" : "2.5#3"
+  }, {
+    "name" : "sfml",
+    "version>=" : "2.5.1#15"
   } ]
 }

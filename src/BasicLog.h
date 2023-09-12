@@ -35,7 +35,7 @@ private:
 };
 }
 
-#define debug(...) \
+#define klog(...) \
   KLogger::Log::d(std::source_location::current(),__VA_ARGS__)
   
 #endif //TRANSLATETOOL_BASICLOG_H

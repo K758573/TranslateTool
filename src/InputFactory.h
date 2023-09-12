@@ -12,6 +12,8 @@ class InputFactory
 {
 
 public:
+  static std::vector<INPUT> KEYS_CONTROL_C;
+
   enum KEY_TYPE
   {
     KEY_DOWN, KEY_UP
