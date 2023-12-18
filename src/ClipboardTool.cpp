@@ -131,10 +131,11 @@ bool ClipboardTool::waitCopy()
   return true;
 }
 
-ClipboardTool::ClipboardTool()
+ClipboardTool::ClipboardTool(void *hwnd) :
+  hwnd_(hwnd)
 {
   id_ = HOT_KEY_ID;
-  bool ret = RegisterHotKey(nullptr, id_, MOD_CONTROL | MOD_ALT | MOD_NOREPEAT, 0x51);
+  bool ret = RegisterHotKey((HWND)hwnd_, id_, MOD_CONTROL | MOD_ALT | MOD_NOREPEAT, 0x51);
   if (ret) {
     klog("register global key ctrl+alt+q success");
   } else {
@@ -144,7 +145,7 @@ ClipboardTool::ClipboardTool()
 
 ClipboardTool::~ClipboardTool()
 {
-  bool ret = UnregisterHotKey(nullptr, id_);
+  bool ret = UnregisterHotKey((HWND)hwnd_, id_);
   if (ret) {
     klog("unregister global key ctrl+alt+q success");
   } else {

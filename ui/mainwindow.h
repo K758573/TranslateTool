@@ -23,10 +23,14 @@ public:
   
   ~MainWindow() override;
 
+  void translateCurrentText();
+
 protected:
-  virtual bool nativeEvent(const QByteArray &eventType, void *message, qintptr *result) override;
+  bool nativeEvent(const QByteArray &eventType, void *message, qintptr *result) override;
   
-  void focusOutEvent(QFocusEvent *event) override;
+  void closeEvent(QCloseEvent *event) override;
+  
+  void showEvent(QShowEvent *event) override;
 
 private:
   Ui::MainWindow *ui;

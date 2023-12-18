@@ -18,9 +18,11 @@ private:
   //当前读取到的内容，保存的是原始数据
   std::string buffer_;
   //global key id
-  int id_;
+  int id_{};
+  
+  void* hwnd_;
 public:
-  ClipboardTool();
+  explicit ClipboardTool(void *hwnd);
   
   virtual ~ClipboardTool();
   
